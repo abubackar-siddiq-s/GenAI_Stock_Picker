@@ -3,7 +3,7 @@ import streamlit as st
 from langchain.llms import OpenAI
 
 # Set your OpenAI API key (best to use a Streamlit secret or environment variable in production)
-os.environ['OPENAI_API_KEY'] = "your-api-key-here"  # <-- Replace with your real API key
+os.environ['OPENAI_API_KEY'] = "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"  # <-- Replace with your real API key
 
 # Streamlit UI
 st.set_page_config(page_title="GenAI Stock Advisor", page_icon="📈")

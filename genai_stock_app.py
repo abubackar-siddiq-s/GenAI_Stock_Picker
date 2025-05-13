@@ -3,8 +3,7 @@ from langchain_openai import OpenAI
 import os
 
 # Use Streamlit secrets (defined in .streamlit/secrets.toml)
-openai_api_key = st.secrets["OPENAI_API_KEY"]
-os.environ["OPENAI_API_KEY"] = openai_api_key
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Streamlit UI
 st.set_page_config(page_title="GenAI Stock Advisor", page_icon="📈")

@@ -1,9 +1,10 @@
 import streamlit as st
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 import os
 
 # Use Streamlit secrets (defined in .streamlit/secrets.toml)
-os.environ["OPENAI_API_KEY"] = "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"
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = openai_api_key
 
 # Streamlit UI
 st.set_page_config(page_title="GenAI Stock Advisor", page_icon="📈")
@@ -20,7 +21,7 @@ if st.button("Suggest Stocks"):
         with st.spinner("Generating suggestions..."):
             try:
                 llm = OpenAI(temperature=0.6)
-                response = llm(user_prompt)
+                response = llm.invoke(user_prompt)
                 st.success("Here are your stock suggestions:")
                 st.write(response)
             except Exception as e:

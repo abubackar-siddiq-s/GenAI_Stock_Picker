@@ -1,0 +1,12 @@
+# Ignore virtual environment folders
+venv/
+.venv/
+env/
+myenv/
+
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore Streamlit secrets file (VERY IMPORTANT!)
+.streamlit/secrets.toml
